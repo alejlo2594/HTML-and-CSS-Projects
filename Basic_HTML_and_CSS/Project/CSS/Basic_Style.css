@@ -93,7 +93,7 @@ h1  {
 @keyframes race {
     0%, 100% {
         transform: translateY(0px);
-        background-image: url("../images/Icon_1.png");
+        background-image: url("../images/Icon_2.png");
     }
     50% {
         transform: translateY(300px);
