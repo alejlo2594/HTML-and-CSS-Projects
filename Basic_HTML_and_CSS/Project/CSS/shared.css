@@ -300,7 +300,7 @@ section {
     float: right;
 }
 
-.terms :hover{
+.terms:hover {
     color: orange;
     text-decoration: underline;
 }
