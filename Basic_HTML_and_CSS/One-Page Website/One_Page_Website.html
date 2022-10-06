@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<img src=".\Images\Thumbnail_5.jpg" alt="Nail Spa Name">
+		<link rel="stylesheet" href="./CSS/one_page_website.css"
 	</head>
 	<body>
 	
@@ -31,49 +32,37 @@
 		<!-- GALLERY -->
 		<section>
 			<div id="gallery">
-				<h1>Gallery</h1>
+				<h1><center>Gallery</center></h1>
 				<div>
 				
 					<!-- PHOTO CONTAINER 1 -->
-					<div>
-						<div>
+					<div class="photo-container">
+						<div class="photo">
 						<img src=".\Images\Thumbnail_1.jpg" alt="Space Travel Image" width="450" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
-							</div>
 						</div>
 					</div>
 					<!-- END PHOTO CONTAINER 1 -->
 					
 					<!-- PHOTO CONTAINER 2 -->
-					<div>
-						<div>
+					<div class="photo-container">
+						<div class="photo">
 						<img src=".\Images\Thumbnail_2.jpg" alt="Space Travel Image" width="450" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
-							</div>
 						</div>
 					</div>
 					<!-- END PHOTO CONTAINER 2 -->
 					
 					<!-- PHOTO CONTAINER 3 -->
-					<div>
-						<div>
+					<div class="photo-container">
+						<div class="photo">
 						<img src=".\Images\Thumbnail_3.jpg" alt="Space Travel Image" width="450" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
-							</div>
 						</div>
 					</div>
 					<!-- END PHOTO CONTAINER 3 -->
 					
 					<!-- PHOTO CONTAINER 4 -->
-					<div>
-						<div>
+					<div class="photo-container">
+						<div class="photo">
 						<img src=".\Images\Thumbnail_4.jpg" alt="Space Travel Image" width="450" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
-							</div>
 						</div>
 					</div>
 					<!-- END PHOTO CONTAINER 4 -->
@@ -84,43 +73,42 @@
 		<!-- END GALLERY -->
 		
 		<!-- RSVP -->
-		<section>
-			<div id="contact">
-				<div>
-					<div>
-						<h2><span>Reservations</span>
-							<br />Book your 1st appointment today!
+		<section id="contact">
+            <div id="container">
+				<div class="heading-padding">
+					<h1 class="heading-padding"><center>Reservations</center></h1>
+					<div class="reservation">
+						<h2><span>new clients receive 10% off</span>
+							<br/>Reserve your appointment today!
 						</h2>
-						<p>
-							Please provide us with your basic contact information.
+						<p class="rsvp-text">
+							<center>Please provide us with your basic contact information.</center>
 						</p>
-						<div>
-							<form action="" method="post"
-								<input class="rsvp" type="text" value="First Name">
-								<input class="rsvp" type="text" value="Full Name">
-								<input class="rsvp" type="text" value="Preferred Service">
-								<input class="rsvp" type="text" value="Phone Number">
-								<input class="rsvp" type="text" value="Email Address">
-								<div class="form spacer">
-									<label class="terms">Terms and Conditions</label>
-								</div>
-								<div>
+						<div class="form-rsvp">
+							<form action="" method="post">
+								<input class="rsvp" type="text" value="" placeholder="First Name">
+								<input class="rsvp" type="text" value="" placeholder="Last Name">
+								<input class="rsvp" type="text" value="" placeholder="Email Address">
+								<input class="rsvp" type="text" value="" placeholder="Phone Number">
+                            </form>
+							<div class="form spacer">
+								<label class="terms">Terms and Conditions</label>
+							</div>
+								<div class="submit">
 									<input type="submit" value="Submit">
 								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- END RSVP -->
+    						</div>
+					    </div>
+
+				    </div>
+			    </div>
+		    </section>
+	    <!-- END RSVP -->
 		
 		<!-- FOOTER -->
-		<div>
+		<div id="footer">
 			<br>Contact Information:</br>
 			<br>Phone: 201.562.5114</br>
-			<br>www.alejandranailspa.com &nbsp|&nbsp; &copy; 2022</br>
-			
 		</div>
 		<!-- END FOOTER -->
 		
