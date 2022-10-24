@@ -1,7 +1,25 @@
 /***** GENERAL STYLING *****/
+
+/*Affects entire document*/
+html {
+    scroll-behavior: smooth; /*This ensures that the page scrolling is smooth when the buttons on the nav bar is clicked*/
+}
+
 /* Body */
 body {
-    margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
+    margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
+    opacity: 1; /*This and transition affect the page loading fade in effect*/
+    transition: 3s opacity; /*This vauses a 3 second fade in*/
+    letter-spacing: .2vw; /*vw is a relative measurement, 1vw is equal to 1% of the viewport width*/
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+    overflow-x: hidden; /*This prevents the horizontal scroll bar from appearing when the quote is hovered over*/
+    user-select: none; /*This prevents the text on the webpage from being highlighted by user*/
+}
+
+/*This section contributes to the fade effect for the page that occurs when the page is loaded*/
+body.fade-out {
+    opacity: .1; /*This sets the level of opacity at the start of the page load*/
 }
 
 /* Heading 1 elements */
@@ -23,21 +41,22 @@ h1:hover {
 /* Styling for portfolio title text */
 .white-text {
     color: rgb(248, 241, 241); /* This is used to change the color of the portfolio title text */
+    padding-top: 10vh; /*Adds padding (equal to 10% of the viewport height) to the top of the Portfolio Title text*/
 }
 
 /* Paragraph elements */
 p {
     font-family: Georgia, 'Times New Roman', Times, serif Extra Bold;
     text-align: justify; /* Justify text within paragraph elements */
-    letter-spacing: 1px; /* This expands the text slightly */
-    font-size: 20px;
-    padding-left: 20px; /* Adds padding to the left of the paragraph element */
-    padding-right: 20px; /* Adds padding to the right of the paragraph element */
+    letter-spacing: .1vw; /* This expands the text slightly */
+    font-size: 2.5vw;
+    padding-left: 1vw; /* Adds padding to the left of the paragraph element */
+    padding-right: 1vw; /* Adds padding to the right of the paragraph element */
 }
 
 /* Paragraph element hover effect */
 p:hover {
-    transition: transform .5s; /* This makes the transform effect last 1 second */
+    transition: transform 1s; /* This makes the transform effect last 1 second */
 	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
 }
 
@@ -55,6 +74,8 @@ p:hover {
 /* Anchor elements */
 a {
     color: rgba(139, 170, 163, 0.986); /* This ensures all links are blue */
+    cursor: pointer; /*This ensures all links change the mouse to a pointer when hovered over or clicked*/
+    text-decoration: underline; /*This makes elements with class "center" increase by 1.1 when hovered over*/
 }
 
 /* Quotation elements */
@@ -67,26 +88,14 @@ img {
     filter: grayscale(50%); /* This rids our pictures of 75% of their color */
     border-radius: 8px; /* Gives all images slightly rounded corners */
     max-width: 100%; /* Ensures all images stay within the width of their container */
-    height: 340px; /* Sets the height of all images */
+    max-height: 100%; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
-    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
-    margin-right: auto;
+    margin: auto auto auto auto; /*This centers all images*/ 
 }
 
 /* Image element hover effects */
 img:hover {
 	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 1s; /* Transition lasts 1 second */
-	transform: scale(1.1); /* Image is increased slightly when hovered over */
-}
-
-/* The @media rule is used in media queries to apply different styles for different media/types of devices */
-/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
-@media screen and (max-width: 576px) {
-    img {
-        height: 100px;
-        margin-top: 150px;
-    }
 }
 
 /* Styling for footer element */
@@ -119,10 +128,10 @@ footer {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
     color: white; /* This is the font color for text on our navbar */
-    padding: 14px 16px; /* This adds padding around our text */
+    padding: .75vw 1vw; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
     font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-    font-size: 20px; /* This specifies the font size for text on our navbar */
+    font-size: 1.5vw; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
@@ -135,19 +144,13 @@ footer {
     to {top: 0vw;} /* This lowers the navbar text onto the navbar */
 }
 
-/* Screens 576px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 576px) {
-    .Navbar a{
-        width: 25%; /* This makes each link take up 1/4 of the navbar */
-        font-size: 12px;
-    }
-}
-
 /* Navbar hover effects */
 .Navbar a:hover {
     background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
     color: black; /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+    cursor: pointer;
+    transition: 0.5s ease-in; /*Creates a smooth transition for the hover trigger*/
 }
 
 /* Navbar home button */
@@ -178,7 +181,8 @@ footer {
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
-    padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
+    height: 100vh; /* This ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
+    padding-top: 2vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveVideoText 5.75s;
     animation: moveVideoText 5.75s;
@@ -190,6 +194,22 @@ footer {
     to {top: 0vw;} /* This moves the video text to the normal positioning on the viewport */
 }
 /***** END OF VIDEO STYLING *****/
+
+/***** SLIDESHOW STYLING *****/
+#Slideshow_Background {
+    background: rgba(255, 255, 255, .035); /*This creates a slightly transparent white background that's placed over the video in the background*/
+}
+
+.mySlides {
+    display: none; /*This prevents images from being displayed, we will use JS to display these*/
+}
+
+/* Slideshow Section / container */
+
+
+
+/***** END OF SLIDESHOW STYLING *****/
+
 
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
 * { /* The asterisk is a universal selector that applies this effect to all elements on the page */
