@@ -12,7 +12,7 @@ body {
     transition: 3s opacity; /*This vauses a 3 second fade in*/
     letter-spacing: .2vw; /*vw is a relative measurement, 1vw is equal to 1% of the viewport width*/
     font-family: Avant Garde, Helvetica;
-    font-size: 1.5vw;
+    font-size: 1vw;
     overflow-x: hidden; /*This prevents the horizontal scroll bar from appearing when the quote is hovered over*/
     user-select: none; /*This prevents the text on the webpage from being highlighted by user*/
 }
@@ -25,9 +25,10 @@ body.fade-out {
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
+    font-size: 2.5vw;
     font-family: "Franklin Gothic Book"; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
-    margin-top: 3%; /* Adds a small margin above h1 elements */
+    margin-top: 1%; /* Adds a small margin above h1 elements */
     color: #1a1a1a; 
 }
 
@@ -49,9 +50,14 @@ p {
     font-family: Georgia, 'Times New Roman', Times, serif Extra Bold;
     text-align: justify; /* Justify text within paragraph elements */
     letter-spacing: .1vw; /* This expands the text slightly */
-    font-size: 2.5vw;
+    font-size: 14px;
     padding-left: 1vw; /* Adds padding to the left of the paragraph element */
     padding-right: 1vw; /* Adds padding to the right of the paragraph element */
+    padding-bottom: 1vw;
+}
+
+#projects {
+    color: rgb(248, 241, 241);
 }
 
 /* Paragraph element hover effect */
@@ -325,7 +331,8 @@ footer {
     width: 50%;
     padding: 1.6%;
     height: 450px;
-    background-color: rgba(139, 170, 163, 0.795);
+    background-color: #f2f2f2;
+    opacity: .85;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
